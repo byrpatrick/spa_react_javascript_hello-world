@@ -7,12 +7,9 @@ COPY package*.json ./
 
 RUN npm install
 
-COPY json-server json-server
 COPY public public
 COPY src src
 
 EXPOSE 4040
 
-CMD [ "npx", "concurrently",  "npm run api", "npm start" ]
-
-EXPOSE 6060
+CMD [ "npm", "start" ]
